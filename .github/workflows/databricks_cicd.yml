@@ -54,4 +54,6 @@ jobs:
 
       # Push code from dev to test branch
       - name: Pusch code from Dev to Test
-        run: git push origin test_dir
+        run: |
+          cd dev_dir
+          cp -r * test_dir

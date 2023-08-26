@@ -2,7 +2,7 @@
 # MAGIC %md
 # MAGIC ## Note
 # MAGIC
-# MAGIC If the test is run from the CLI or with dbutils.notebook.run, do not forget to uncomment 'result.exit(dbutils)' after locally testing. So is is NOT commented out here in order for test_run_all_tests to work
+# MAGIC If the test is run from the CLI or with dbutils.notebook.run, do not forget to uncomment 'result.exit(dbutils)' after locally testing. So is is NOT commented out here in order for test_run_all_tests to work. 
 
 # COMMAND ----------
 
@@ -12,7 +12,7 @@ class MyTestFixture(NutterFixture):
 
     def assertion_import_basics(self) -> None:
         """
-        This test will just import the ml modules and check if they exists.
+        This is a test
         """
         try:
             from addition import addition_two_numbers

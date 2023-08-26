@@ -58,4 +58,6 @@ jobs:
 
       # Push code from dev to test branch
       - name: Pusch code from Dev to Test branch
-        run: git push origin Dev:Test
+        run: |
+          git pull
+          git push origin Dev:Test

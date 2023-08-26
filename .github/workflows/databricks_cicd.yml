@@ -60,4 +60,4 @@ jobs:
       - name: Pusch code from Dev to Test
         run: |
           cd dev_dir
-          cp -r * test_dir
+          cp -r * test_cicd/test_dir

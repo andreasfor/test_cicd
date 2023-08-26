@@ -51,3 +51,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Push code from dev to test branch
+      - name: Pusch code from Dev to Test
+        run: git push dev_dir test_dir

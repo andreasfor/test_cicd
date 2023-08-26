@@ -34,3 +34,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Runs a nutter tests
+      - name: Run Nutter tests
+        run: |
+          pip install nutter
+
+          export DATABRICKS_HOST=https://adb-4821230018992413.13.azuredatabricks.net
+          export DATABRICKS_TOKEN=dapi88db6a2de5efa0fc1955cba77c061479-2
+
+          nutter run /Repos/andreas.forsberg@capgemini.com/test_cicd/dev_dir/nutter_test --cluster_id 0826-123427-50uwyk9k -timeout 100

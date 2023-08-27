@@ -41,7 +41,7 @@ jobs:
 
       - name: Push code
         run: |
-          git push origin Dev:Test
+          git push origin Dev:Test --force
 
 
 

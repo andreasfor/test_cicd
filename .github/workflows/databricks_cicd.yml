@@ -67,4 +67,4 @@ jobs:
       - name: Pusch code from Dev to Test branch
         run: |
           git checkout Test
-          git push test_cicd Test
+          git push https://github.com/andreasfor/test_cicd.git Test

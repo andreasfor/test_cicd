@@ -1,4 +1,4 @@
-name: CI
+name: CICD workflow
 
 on:
   push:
@@ -16,15 +16,12 @@ jobs:
     needs: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Run Nutter tests
         run: |
           pip install nutter
   
-          export DATABRICKS_HOST=https://adb-4821230017912413.13.azuredatabricks.net
-          export DATABRICKS_TOKEN=dapi81dbga2de5efa0fc1966cba77c061479-2
+          export DATABRICKS_HOST=https://adb-4821230018992413.13.azuredatabricks.net
+          export DATABRICKS_TOKEN=dapi88db6a2de5efa0fc1955cba77c061479-2
   
           nutter run /Repos/andreas.forsberg@capgemini.com/test_cicd/dev_dir/nutter_test --cluster_id 0826-123427-50uwyk9k -timeout 1000
 
@@ -32,9 +29,6 @@ jobs:
     needs: Dev
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Push code from Dev to Test branch
         run: |
           git checkout -B Test ${{ github.sha }}

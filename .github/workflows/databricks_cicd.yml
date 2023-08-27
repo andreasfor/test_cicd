@@ -66,5 +66,5 @@ jobs:
       # Push code from dev to test branch
       - name: Pusch code from Dev to Test branch
         run: |
-          git checkout test
-          git push test_cicd test
+          git checkout Test
+          git push test_cicd Test

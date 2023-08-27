@@ -40,7 +40,6 @@ jobs:
           echo test, and deploy your project.
 
       - name: Push code
-        uses: andreasfor/test_cicd@Dev
         with:
           source-directory: 'test_dir'
           destination-github-username: 'andreasfor'

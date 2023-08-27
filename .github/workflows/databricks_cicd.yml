@@ -35,4 +35,4 @@ jobs:
       - name: Force Push to Test branch
         run: |
           git checkout Test
-          git push -f origin Test
+          git push -f https://github.com/andreasfor/test_cicd.git Test

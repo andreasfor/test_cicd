@@ -40,10 +40,14 @@ jobs:
           echo test, and deploy your project.
 
       - name: Push code
-        run: |
-          git checkout Dev
-          git pull origin Dev
-          git push Dev Test
+        uses: andreasfor/test_cicd@Dev
+        with:
+          source-directory: 'test_dir'
+          destination-github-username: 'andreasfor'
+          destination-repository-name: 'test_cicd'
+          user-email: andreas.bengt.forsberg@gmail.com
+          target-branch: Test
+          target-directory: New
 
 
 
